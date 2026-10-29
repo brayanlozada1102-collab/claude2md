@@ -1,0 +1,13 @@
+services:
+  claude2md:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: claude2md
+    stdin_open: true  # Equivalente a -i (mantiene STDIN abierto)
+    tty: true         # Equivalente a -t (habilita terminal para Inquirer)
+    volumes:
+      # Monta tu conversations.json local dentro del contenedor
+      - ./conversations.json:/app/conversations.json:ro
+      # Monta el directorio de salida para que los archivos .md se guarden en tu máquina host
+      - ./exports:/app/exports

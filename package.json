@@ -1,0 +1,31 @@
+{
+  "name": "claude2md",
+  "version": "1.0.0",
+  "description": "CLI tool to parse Claude exported conversations to optimized Markdown for LLM context",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "claude2md": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts"
+  },
+  "keywords": ["claude", "markdown", "llm", "cli", "stream-json"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@inquirer/prompts": "^7.3.2",
+    "picocolors": "^1.1.1",
+    "stream-chain": "^4.4.1",
+    "stream-json": "^3.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "@types/stream-chain": "^2.0.4",
+    "@types/stream-json": "^1.7.8",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
